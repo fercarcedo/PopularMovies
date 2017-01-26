@@ -31,7 +31,7 @@ public class NetworkUtils {
     private static final String POPULAR_MOVIES = "popular";
     private static final String TOP_RATED_MOVIES = "top_rated";
     private static final String API_KEY_KEY = "api_key";
-    private static final String API_KEY_VALUE = "a85b53b10b81feed4c91c1eab93dd402";
+    private static final String API_KEY_VALUE = "INSERT_YOUR_API_KEY_HERE";
     private static final String PAGE_KEY = "page";
 
     public static URL getMoviesURL(boolean byPopularity) {
