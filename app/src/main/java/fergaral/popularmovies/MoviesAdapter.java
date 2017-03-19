@@ -72,7 +72,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
 
         public void bind(Movie movie) {
             Picasso.with(mMoviePosterImageView.getContext())
-                    .load(movie.getImageThumbnail())
+                    .load(MovieDBAPIClient.IMAGE_REPOSITORY_URL + movie.getImageThumbnail())
                     .placeholder(new ColorDrawable(
                                     ContextCompat.getColor(mMoviePosterImageView.getContext(),
                                             R.color.white)))

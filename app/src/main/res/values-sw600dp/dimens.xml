@@ -1,0 +1,19 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="app_bar_height">540dp</dimen>
+    <dimen name="tv_detailscreen_label_margin_bottom">10dp</dimen>
+    <dimen name="tv_detailscreen_label_margin_left">32dp</dimen>
+    <dimen name="tv_deatilscreen_label_margin_top">32dp</dimen>
+    <dimen name="tv_detailscreen_label_text_size">30sp</dimen>
+    <dimen name="tv_detailscreen_value_margin_left">32dp</dimen>
+    <dimen name="tv_detailscreen_value_margin_right">32dp</dimen>
+    <dimen name="tv_detailscreen_value_margin_top">10dp</dimen>
+    <dimen name="tv_detailscreen_text_size">20sp</dimen>
+    <dimen name="ratingbar_margin_left">32dp</dimen>
+    <dimen name="ratingbar_margin_right">32dp</dimen>
+    <dimen name="tv_detail_error_text_size">20sp</dimen>
+    <dimen name="tv_detail_no_content_text_size">20sp</dimen>
+    <dimen name="trailer_text_size">20sp</dimen>
+    <dimen name="review_author_text_size">22sp</dimen>
+    <dimen name="review_content_text_size">18sp</dimen>
+</resources>

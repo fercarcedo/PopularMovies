@@ -19,4 +19,27 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="ToolBarStyle" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+
+    <style name="DetailLabelTextViewStyle">
+        <item name="android:layout_marginBottom">@dimen/tv_detailscreen_label_margin_bottom</item>
+        <item name="android:layout_marginLeft">@dimen/tv_detailscreen_label_margin_left</item>
+        <item name="android:layout_marginStart">@dimen/tv_detailscreen_label_margin_start</item>
+        <item name="android:textSize">@dimen/tv_detailscreen_label_text_size</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="DetailValueTextViewStyle">
+        <item name="android:layout_marginTop">@dimen/tv_detailscreen_value_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/tv_detailscreen_value_margin_left</item>
+        <item name="android:layout_marginStart">@dimen/tv_detailscreen_value_margin_start</item>
+        <item name="android:layout_marginRight">@dimen/tv_detailscreen_value_margin_right</item>
+        <item name="android:layout_marginEnd">@dimen/tv_detailscreen_value_margin_end</item>
+        <item name="android:textSize">@dimen/tv_detailscreen_text_size</item>
+    </style>
+
 </resources>

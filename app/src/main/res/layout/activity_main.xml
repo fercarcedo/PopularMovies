@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/lightgray"
     tools:context="fergaral.popularmovies.MainActivity">
 
@@ -33,19 +34,19 @@
         android:visibility="invisible">
 
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="@dimen/no_network_img_size"
+            android:layout_height="@dimen/no_network_img_size"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_cloud_off_black_24dp"
+            app:srcCompat="@drawable/ic_cloud_off_black_24dp"
             android:contentDescription="@string/cloud_no_internet" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="16dp"
+            android:padding="@dimen/no_network_text_padding"
             android:layout_gravity="center_horizontal"
             android:text="@string/error_message"
-            android:textSize="22sp" />
+            android:textSize="@dimen/no_network_text_size" />
 
         <Button
             android:layout_width="wrap_content"
@@ -54,7 +55,8 @@
             android:textColor="@color/colorAccent"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_gravity="center_horizontal"
-            android:textSize="20sp" />
+            android:textSize="@dimen/no_network_retry_size"
+            android:onClick="retry" />
 
     </LinearLayout>
 
@@ -63,6 +65,15 @@
         android:layout_width="@dimen/progressbar_size"
         android:layout_height="@dimen/progressbar_size"
         android:layout_gravity="center"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_no_movies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/no_movies"
+        android:textSize="@dimen/no_movies_text_size"
         android:visibility="invisible" />
 
 </FrameLayout>

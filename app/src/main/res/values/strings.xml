@@ -6,6 +6,7 @@
     <string name="sort_order">Sort order</string>
     <string name="most_popular">Most popular</string>
     <string name="highest_rated">Highest-rated</string>
+    <string name="favorites">Favorites</string>
     <string name="ok_button_label">OK</string>
     <string name="title_activity_detail">DetailActivity</string>
     <string name="action_settings">Settings</string>
@@ -16,4 +17,18 @@
     <string name="movie_transition_string">movie_shared_element_transition</string>
     <string name="cloud_no_internet">Cloud no internet</string>
     <string name="retry">Retry</string>
+    <string name="action_favorite">Favorite</string>
+    <string name="reviews">Reviews</string>
+    <string name="trailers">Trailers</string>
+    <string name="play_trailer">Play trailer</string>
+    <string name="trailer_name">Trailer %1$d</string>
+    <string name="review_author_title">%1$s:</string>
+    <string name="base_trailer_url" translatable="false">http://www.youtube.com/watch?v=%1$s</string>
+    <string name="error_trailers">There was an error fetching trailers</string>
+    <string name="error_reviews">There was an error fetching reviews</string>
+    <string name="no_trailers">There are no trailers for this movie</string>
+    <string name="no_reviews">There are no reviews for this movie</string>
+    <string name="content_authority" translatable="false">fergaral.popularmovies</string>
+    <string name="no_movies">There are no movies to display</string>
+    <string name="action_share">Share</string>
 </resources>

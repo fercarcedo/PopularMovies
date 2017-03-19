@@ -10,15 +10,15 @@ public final class PopularMoviesPreferences {
 
     private static final String PREFS_NAME = "popular_movies_prefs";
 
-    public static boolean getBoolean(Context context, String key) {
+    public static int getInt(Context context, String key) {
         return context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-                        .getBoolean(key, false);
+                        .getInt(key, 0);
     }
 
-    public static void putBoolean(Context context, String key, boolean value) {
+    public static void putInt(Context context, String key, int value) {
         context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
                 .edit()
-                .putBoolean(key, value)
+                .putInt(key, value)
                 .apply();
     }
 }

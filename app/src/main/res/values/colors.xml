@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF9100</color>
     <color name="lightgray">#eff0f4</color>
     <color name="white">#FFFFFF</color>
+    <color name="dividerColor">#dadada</color>
 </resources>

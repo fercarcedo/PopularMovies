@@ -17,68 +17,161 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/release_date"
-            android:textColor="@color/colorAccent"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="5dp"
-            android:textSize="20sp" />
+            style="@style/DetailLabelTextViewStyle" />
 
-        <TextView android:id="@+id/tv_release_date"
+        <TextView
+            android:id="@+id/tv_release_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="5dp"
-            android:textSize="15sp" />
+            style="@style/DetailValueTextViewStyle" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#dadada" />
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/dividerColor" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/plot_synopsis"
-            android:textColor="@color/colorAccent"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="16dp"
-            android:textSize="20sp" />
+            style="@style/DetailLabelTextViewStyle"/>
 
-        <TextView android:id="@+id/tv_plot_synopsis"
+        <TextView
+            android:id="@+id/tv_plot_synopsis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="5dp"
-            android:textSize="15sp" />
+            style="@style/DetailValueTextViewStyle" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#dadada" />
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/dividerColor" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/rating"
-            android:textColor="@color/colorAccent"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="16dp"
-            android:textSize="20sp" />
+            style="@style/DetailLabelTextViewStyle"/>
 
-        <android.support.v7.widget.AppCompatRatingBar android:id="@+id/rb_rating"
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/rb_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginLeft="@dimen/ratingbar_margin_left"
+            android:layout_marginStart="@dimen/ratingbar_margin_start"
+            android:layout_marginRight="@dimen/ratingbar_margin_right"
+            android:layout_marginEnd="@dimen/ratingbar_margin_end"
             android:isIndicator="true" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trailers"
+            style="@style/DetailLabelTextViewStyle" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_trailers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/rv_detail_margin_bottom"
+                android:layout_marginEnd="@dimen/rv_detail_margin_end"
+                android:layout_marginLeft="@dimen/rv_detail_margin_left"
+                android:layout_marginRight="@dimen/rv_detail_margin_right"
+                android:layout_marginStart="@dimen/rv_detail_margin_start"
+                android:layout_marginTop="@dimen/rv_detail_margin_top" />
+
+            <ProgressBar
+                android:id="@+id/pb_load_trailers"
+                android:layout_width="@dimen/progressbar_size"
+                android:layout_height="@dimen/progressbar_size"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_error_trailers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/error_trailers"
+                android:textSize="@dimen/tv_detail_error_text_size"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_no_trailers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/no_trailers"
+                android:textSize="@dimen/tv_detail_no_content_text_size"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reviews"
+            style="@style/DetailLabelTextViewStyle" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_reviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/rv_detail_margin_bottom"
+                    android:layout_marginEnd="@dimen/rv_detail_margin_end"
+                    android:layout_marginLeft="@dimen/rv_detail_margin_left"
+                    android:layout_marginRight="@dimen/rv_detail_margin_right"
+                    android:layout_marginStart="@dimen/rv_detail_margin_start"
+                    android:layout_marginTop="@dimen/rv_detail_margin_top" />
+
+                <ProgressBar
+                    android:id="@+id/pb_load_reviews"
+                    android:layout_width="@dimen/progressbar_size"
+                    android:layout_height="@dimen/progressbar_size"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_error_reviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/error_reviews"
+                    android:textSize="@dimen/tv_detail_error_text_size"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_no_reviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/no_reviews"
+                    android:textSize="@dimen/tv_detail_no_content_text_size"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <ProgressBar
+                android:id="@+id/pb_load_reviews_page"
+                android:layout_width="@dimen/progressbar_size"
+                android:layout_height="@dimen/progressbar_size"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
+        </RelativeLayout>
     </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>
