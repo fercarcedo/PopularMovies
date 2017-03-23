@@ -3,6 +3,7 @@ package fergaral.popularmovies;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,7 @@ import java.util.List;
  */
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewHolder> {
-    private List<Movie> mMovies;
+    private ArrayList<Movie> mMovies;
     private final MovieClickListener mListener;
 
     public interface MovieClickListener {
@@ -29,7 +30,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
         this(null, listener);
     }
 
-    public MoviesAdapter(List<Movie> movies, MovieClickListener listener) {
+    public MoviesAdapter(ArrayList<Movie> movies, MovieClickListener listener) {
         mMovies = (movies != null) ? movies : new ArrayList<Movie>();
         mListener = listener;
     }
@@ -55,6 +56,14 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
     public void addMovies(List<Movie> movies) {
         mMovies.addAll(movies);
         notifyDataSetChanged();
+        /*if (mListener != null && !movies.isEmpty()) {
+            Log.d("TAG", String.valueOf(movies.size()));
+            mListener.onClick(movies.get(0), null);
+        }*/
+    }
+
+    public ArrayList<Movie> getMovies() {
+        return mMovies;
     }
 
     public void clear() {

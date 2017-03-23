@@ -5,7 +5,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +46,7 @@ public class TrailersAdapter extends RecyclerView.Adapter<TrailersAdapter.Traile
 
     @Override
     public void onBindViewHolder(TrailerViewHolder holder, int position) {
-        holder.bind(position + 1);
+        holder.bind(position);
     }
 
     @Override
@@ -58,16 +61,19 @@ public class TrailersAdapter extends RecyclerView.Adapter<TrailersAdapter.Traile
     }
 
     public class TrailerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView tvTrailer;
+        ImageView ivThumbnail;
 
         public TrailerViewHolder(View itemView) {
             super(itemView);
-            tvTrailer = (TextView) itemView.findViewById(R.id.tv_trailer);
+            ivThumbnail = (ImageView) itemView.findViewById(R.id.iv_trailer_thumbnail);
             itemView.setOnClickListener(this);
         }
 
-        public void bind(int number) {
-            tvTrailer.setText(mContext.getString(R.string.trailer_name, number));
+        public void bind(int position) {
+            Picasso.with(mContext)
+                    .load(mContext.getString(R.string.base_trailer_thumbnail_url, mVideos.get(position).getKey()))
+                    .placeholder(R.drawable.ic_play_arrow_black_24dp)
+                    .into(ivThumbnail);
         }
 
         @Override

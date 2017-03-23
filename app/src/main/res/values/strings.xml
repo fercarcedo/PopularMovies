@@ -24,6 +24,7 @@
     <string name="trailer_name">Trailer %1$d</string>
     <string name="review_author_title">%1$s:</string>
     <string name="base_trailer_url" translatable="false">http://www.youtube.com/watch?v=%1$s</string>
+    <string name="base_trailer_thumbnail_url" translatable="false">http://img.youtube.com/vi/%1$s/0.jpg</string>
     <string name="error_trailers">There was an error fetching trailers</string>
     <string name="error_reviews">There was an error fetching reviews</string>
     <string name="no_trailers">There are no trailers for this movie</string>
@@ -31,4 +32,6 @@
     <string name="content_authority" translatable="false">fergaral.popularmovies</string>
     <string name="no_movies">There are no movies to display</string>
     <string name="action_share">Share</string>
+    <string name="trailer_image_thumbnail">Trailer thumbnail</string>
+    <string name="no_movie_selected">No movie selected</string>
 </resources>

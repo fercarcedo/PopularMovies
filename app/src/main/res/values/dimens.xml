@@ -56,4 +56,7 @@
     <dimen name="tv_detail_error_text_size">15sp</dimen>
     <dimen name="tv_detail_no_content_text_size">15sp</dimen>
     <dimen name="review_content_text_size">14sp</dimen>
+    <dimen name="item_width">500dp</dimen>
+    <dimen name="no_movie_selected_text_size">25sp</dimen>
+    <dimen name="no_movie_selected_margin">40dp</dimen>
 </resources>

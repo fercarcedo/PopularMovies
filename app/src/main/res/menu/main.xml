@@ -4,7 +4,21 @@
 
     <item android:id="@+id/action_sort_order"
         android:title="@string/sort_order"
-        android:orderInCategory="1"
-        app:showAsAction="never" />
+        android:icon="@drawable/ic_sort_black_24dp"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/menu_sort_most_popular"
+                android:title="@string/most_popular" />
+            <item
+                android:id="@+id/menu_sort_highest_rated"
+                android:title="@string/highest_rated" />
+
+            <item
+                android:id="@+id/menu_sort_favoritess"
+                android:title="@string/favorites" />
+        </menu>
+    </item>
+
 
 </menu>
