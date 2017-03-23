@@ -92,8 +92,9 @@ public class MoviesProvider extends ContentProvider {
                 long id = mOpenHelper.getWritableDatabase().insert(MoviesContract.MoviesEntry.TABLE_NAME,
                         null,
                         values);
-
-                return ContentUris.withAppendedId(MoviesContract.MoviesEntry.CONTENT_URI, id);
+                Uri returnUri = ContentUris.withAppendedId(MoviesContract.MoviesEntry.CONTENT_URI, id);
+                getContext().getContentResolver().notifyChange(uri, null);
+                return returnUri;
             default:
                 throw new IllegalArgumentException("Invalid uri for inserting movies");
         }
@@ -105,15 +106,23 @@ public class MoviesProvider extends ContentProvider {
 
         switch (uriMatch) {
             case CODE_MOVIES:
-                return mOpenHelper.getWritableDatabase().delete(MoviesContract.MoviesEntry.TABLE_NAME,
+                int tasksDeleted = mOpenHelper.getWritableDatabase().delete(MoviesContract.MoviesEntry.TABLE_NAME,
                         selection,
                         selectionArgs);
+
+                if (tasksDeleted > 0)
+                    getContext().getContentResolver().notifyChange(uri, null);
+                return tasksDeleted;
             case CODE_MOVIES_WITH_ID:
                 String idStr = uri.getLastPathSegment();
 
-                return mOpenHelper.getWritableDatabase().delete(MoviesContract.MoviesEntry.TABLE_NAME,
+                tasksDeleted = mOpenHelper.getWritableDatabase().delete(MoviesContract.MoviesEntry.TABLE_NAME,
                         MoviesContract.MoviesEntry.ID_COLUMN + "=?",
                         new String[] { idStr });
+
+                if (tasksDeleted > 0)
+                    getContext().getContentResolver().notifyChange(uri, null);
+                return tasksDeleted;
             default:
                 throw new IllegalArgumentException("Invalid uri for deleting movies");
         }

@@ -274,8 +274,10 @@ public class MainFragment extends Fragment implements MoviesAdapter.MovieClickLi
             } else {
                 showMoviesView();
                 numPages = 1; //Only one page, since there is no API request
-                addMovies(mMovies);
             }
+
+            if (PopularMoviesPreferences.getInt(getActivity(), SORT_ORDER_KEY) == 2)
+                mMoviesAdapter.setMovies(mMovies);
         } else {
             numPages = 0;
             showNoMoviesView();
