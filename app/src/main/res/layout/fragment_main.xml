@@ -48,15 +48,14 @@
             android:text="@string/error_message"
             android:textSize="@dimen/no_network_text_size" />
 
-        <Button
+        <Button android:id="@+id/btnRetry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/retry"
             android:textColor="@color/colorAccent"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_gravity="center_horizontal"
-            android:textSize="@dimen/no_network_retry_size"
-            android:onClick="retry" />
+            android:textSize="@dimen/no_network_retry_size" />
 
     </LinearLayout>
 

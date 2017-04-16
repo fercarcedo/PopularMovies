@@ -26,6 +26,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -71,6 +72,13 @@ public class MainFragment extends Fragment implements MoviesAdapter.MovieClickLi
         mProgressBarPage = (ProgressBar) view.findViewById(R.id.pb_load_page);
         mNoMoviesTextView = (TextView) view.findViewById(R.id.tv_no_movies);
 
+        Button retryBtn = (Button) view.findViewById(R.id.btnRetry);
+        retryBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                retry(v);
+            }
+        });
         return view;
     }
 
